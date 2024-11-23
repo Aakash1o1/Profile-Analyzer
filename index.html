@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">LeetCode Stats</div>
+            <ul class="navbar-links">
+                <li><a href="javascript:void(0)" onclick="backToProfile()">Profile</a></li>
+                <li><a href="javascript:void(0)" onclick="showCalendarPage()">Recent Activity</a></li>
+                <li><a href="javascript:void(0)" onclick="showCalendarPage()">Calendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+        <!-- Profile Section -->
+        <div id="profile-section">
+          <div id="input-username" style="color: #4a90e2;">
+            <h1>LeetCode Profile Viewer</h1>
+            <input type="text" id="username" placeholder="Enter LeetCode username">
+            <button onclick="fetchProfile()">Fetch Profile</button>
+          </div>
+            <div id="profile-info" style="display:none;">
+                <div class="profile-info">
+                    <img id="profile-img" src="https://via.placeholder.com/150" alt="Profile Image">
+                    <div>
+                        <h2 id="user-name"></h2>
+                        <p id="user-id"></p>
+                        <p id="bio"></p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div>
+                        <h4>Total Solved</h4>
+                        <p id="problems-solved"></p>
+                    </div>
+                    <div>
+                        <h4>Ranking</h4>
+                        <p id="ranking"></p>
+                    </div>
+                    <div>
+                        <h4>Acceptance Rate</h4>
+                        <p id="acceptance-rate"></p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div>
+                        <h4>Easy Solved</h4>
+                        <p id="easy-solved"></p>
+                    </div>
+                    
+                    <div>
+                        <h4>Medium Solved</h4>
+                        <p id="medium-solved"></p>
+                    </div>
+                    <div>
+                        <h4>Hard Solved</h4>
+                        <p id="hard-solved"></p>
+                    </div>
+                </div>
+
+                <button id="view-calendar-btn" onclick="showCalendarPage()">View Recent Activity Calendar</button>
+            </div>
+        </div>
+
+      <!-- Calendar Section -->
+<div id="calendar-section" style="display:none;">
+  <button onclick="backToProfile()">Back to Profile</button>
+  <h3>Recent Activity Calendar:</h3>
+  <div id="calendar-container" class="calendar-grid"></div>
+</div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
